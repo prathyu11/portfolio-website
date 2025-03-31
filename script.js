@@ -88,41 +88,58 @@ document.addEventListener("DOMContentLoaded", function () {
       {
         "particles": {
           "number": {
-            "value": 80,
+            "value": 100,
             "density": {
               "enable": true,
               "value_area": 800
             }
           },
           "color": {
-            "value": "#2563eb"
+            "value": "#6366f1"
           },
           "shape": {
             "type": "circle"
           },
           "opacity": {
             "value": 0.5,
-            "random": false
+            "random": true,
+            "anim": {
+              "enable": true,
+              "speed": 1,
+              "opacity_min": 0.1,
+              "sync": false
+            }
           },
           "size": {
             "value": 3,
-            "random": true
+            "random": true,
+            "anim": {
+              "enable": true,
+              "speed": 2,
+              "size_min": 0.1,
+              "sync": false
+            }
           },
           "line_linked": {
             "enable": true,
             "distance": 150,
-            "color": "#2563eb",
+            "color": "#818cf8",
             "opacity": 0.4,
             "width": 1
           },
           "move": {
             "enable": true,
-            "speed": 6,
+            "speed": 2,
             "direction": "none",
-            "random": false,
+            "random": true,
             "straight": false,
             "out_mode": "out",
-            "bounce": false
+            "bounce": false,
+            "attract": {
+              "enable": true,
+              "rotateX": 600,
+              "rotateY": 1200
+            }
           }
         },
         "interactivity": {
@@ -130,13 +147,24 @@ document.addEventListener("DOMContentLoaded", function () {
           "events": {
             "onhover": {
               "enable": true,
-              "mode": "repulse"
+              "mode": "grab"
             },
             "onclick": {
               "enable": true,
               "mode": "push"
             },
             "resize": true
+          },
+          "modes": {
+            "grab": {
+              "distance": 140,
+              "line_linked": {
+                "opacity": 1
+              }
+            },
+            "push": {
+              "particles_nb": 4
+            }
           }
         },
         "retina_detect": true
@@ -205,4 +233,32 @@ document.addEventListener("DOMContentLoaded", function () {
       interval: 100
     });
   }
+
+  // Add smooth reveal animations
+  ScrollReveal().reveal('.project-item', {
+    distance: '50px',
+    duration: 1000,
+    easing: 'cubic-bezier(0.5, 0, 0, 1)',
+    interval: 150,
+    origin: 'bottom',
+    opacity: 0,
+    scale: 0.9
+  });
+
+  // Add floating animation to skill pills
+  const skillPills = document.querySelectorAll('.skill-pill');
+  skillPills.forEach((pill, index) => {
+    pill.style.animation = `float 3s ease-in-out ${index * 0.2}s infinite`;
+  });
+
+  // Add this CSS animation
+  const style = document.createElement('style');
+  style.textContent = `
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0px); }
+    }
+  `;
+  document.head.appendChild(style);
 });
