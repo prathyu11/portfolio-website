@@ -24,17 +24,12 @@ body {
 header {
   position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
-  padding: 1.5rem 0;
-  z-index: 1000;
-  transition: all 0.3s ease;
-  background: transparent;
-}
-
-header.solid {
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(10px);
-  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
 }
 
 nav ul {
@@ -67,10 +62,9 @@ nav ul li a:hover::after {
   width: 100%;
 }
 
-/* Active Navigation Link */
+/* Active page indicator */
 nav ul li a.active {
   color: var(--primary-color);
-  position: relative;
 }
 
 nav ul li a.active::after {
@@ -420,4 +414,133 @@ nav ul li a:hover {
 
 .contact form button:hover {
     background: var(--secondary-color);
+}
+
+/* Contact Page Styles */
+.contact-content {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contact-info {
+  padding: 2rem;
+  background: var(--accent-color);
+  border-radius: 12px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.contact-item i {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 0.75rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-family: inherit;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+.form-group textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+/* Projects Page Styles */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 2rem 0;
+}
+
+.project-item {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.project-item img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.project-overlay {
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(37, 99, 235, 0.9);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: bottom 0.3s ease;
+  color: white;
+  text-align: center;
+}
+
+.project-item:hover .project-overlay {
+  bottom: 0;
+}
+
+.project-item:hover {
+  transform: translateY(-10px);
+}
+
+.project-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
 }

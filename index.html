@@ -4,7 +4,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-  <script src="https://unpkg.com/scrollreveal"></script>
   <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,15 +11,15 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Header with Transparent to Solid Background on Scroll -->
+  <!-- Header with Menu -->
   <header id="header">
     <nav>
       <ul>
-        <li><a href="#home" class="nav-link">Home</a></li>
-        <li><a href="#about" class="nav-link">About</a></li>
-        <li><a href="#skills" class="nav-link">Skills</a></li>
-        <li><a href="#projects" class="nav-link">Projects</a></li>
-        <li><a href="#contact" class="nav-link">Contact</a></li>
+        <li><a href="index.html" class="nav-link active">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="skills.html" class="nav-link">Skills</a></li>
+        <li><a href="projects.html" class="nav-link">Projects</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
       </ul>
     </nav>
   </header>
@@ -31,7 +30,6 @@
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <div class="profile-image">
-        <!-- Add your professional photo here -->
         <img src="assets/images/profile.jpeg" alt="Prathyusha K">
       </div>
       <h1>Prathyusha K</h1>
@@ -40,7 +38,7 @@
       </div>
       <p class="tagline">Senior Software Engineer specializing in Cloud Architecture & Data Engineering</p>
       <div class="cta-buttons">
-        <a href="#projects" class="btn primary">View Projects</a>
+        <a href="projects.html" class="btn primary">View Projects</a>
         <a href="assets/resume.pdf" class="btn secondary" target="_blank">Download Resume</a>
       </div>
       <div class="social-links">
@@ -50,83 +48,6 @@
       </div>
     </div>
   </section>
-
-  <!-- About Section -->
-  <section id="about" class="about">
-    <div class="container">
-      <h2>About Me</h2>
-      <p>
-        This is where you introduce yourself. Describe your background, skills, and what drives you. Make this section engaging with your unique story.
-      </p>
-    </div>
-  </section>
-
-  <!-- Skills Section -->
-  <section id="skills" class="skills">
-    <div class="container">
-      <h2>Skills</h2>
-      <div class="skills-container">
-        <span class="skill-pill">Cloud Architecture</span>
-        <span class="skill-pill">AWS</span>
-        <span class="skill-pill">Python</span>
-        <span class="skill-pill">Data Engineering</span>
-        <span class="skill-pill">JavaScript</span>
-        <!-- Add more skills -->
-      </div>
-      <div class="skill-bars">
-        <h4>Cloud Architecture</h4>
-        <div class="progress-bar">
-          <div class="progress-fill" style="width: 90%"></div>
-        </div>
-        <h4>Data Engineering</h4>
-        <div class="progress-bar">
-          <div class="progress-fill" style="width: 85%"></div>
-        </div>
-        <!-- Add more skill bars -->
-      </div>
-    </div>
-  </section>
-
-  <!-- Projects Section -->
-  <section id="projects" class="projects">
-    <div class="container">
-      <h2>Projects</h2>
-      <div class="project-grid">
-        <div class="project-item">
-          <img src="assets/images/projects/project1.jpg" alt="Project 1" />
-          <div class="project-overlay">
-            <h3>Project Title 1</h3>
-            <p>Detailed project description goes here</p>
-            <div class="project-links">
-              <a href="#" class="btn primary">View Live</a>
-              <a href="#" class="btn secondary">Source Code</a>
-            </div>
-          </div>
-        </div>
-        <!-- Add more project items similarly -->
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact" class="contact">
-    <div class="container">
-      <h2>Contact</h2>
-      <form action="your-email-handler" method="POST">
-        <input type="text" name="name" placeholder="Prathyusha K" required />
-        <input type="email" name="email" placeholder="prathyuk24@gmail.com" required />
-        <textarea name="message" placeholder="Your Message" required></textarea>
-        <button type="submit" class="btn">Send Message</button>
-      </form>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <div class="container">
-      <p>&copy; 2025 Prathyusha K. All rights reserved.</p>
-    </div>
-  </footer>
 
   <script src="script.js"></script>
 </body>
