@@ -5,6 +5,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
   <script src="https://unpkg.com/scrollreveal"></script>
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Prathyusha K - Portfolio</title>
@@ -25,6 +26,7 @@
 
   <!-- Hero Section -->
   <section id="home" class="hero">
+    <div id="particles-js"></div>
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <div class="profile-image">
@@ -58,22 +60,49 @@
     </div>
   </section>
 
+  <!-- Skills Section -->
+  <section id="skills" class="skills">
+    <div class="container">
+      <h2>Skills</h2>
+      <div class="skills-container">
+        <span class="skill-pill">Cloud Architecture</span>
+        <span class="skill-pill">AWS</span>
+        <span class="skill-pill">Python</span>
+        <span class="skill-pill">Data Engineering</span>
+        <span class="skill-pill">JavaScript</span>
+        <!-- Add more skills -->
+      </div>
+      <div class="skill-bars">
+        <h4>Cloud Architecture</h4>
+        <div class="progress-bar">
+          <div class="progress-fill" style="width: 90%"></div>
+        </div>
+        <h4>Data Engineering</h4>
+        <div class="progress-bar">
+          <div class="progress-fill" style="width: 85%"></div>
+        </div>
+        <!-- Add more skill bars -->
+      </div>
+    </div>
+  </section>
+
   <!-- Projects Section -->
   <section id="projects" class="projects">
     <div class="container">
       <h2>Projects</h2>
       <div class="project-grid">
         <div class="project-item">
-          <img src="assets/images/projects/project1.jpg" alt="Project 1 Screenshot" />
-          <h3>Project Title 1</h3>
-          <p>A short description of project 1 goes here.</p>
+          <img src="assets/images/projects/project1.jpg" alt="Project 1" />
+          <div class="project-overlay">
+            <h3>Project Title 1</h3>
+            <p>Detailed project description goes here</p>
+            <div class="project-links">
+              <a href="#" class="btn primary">View Live</a>
+              <a href="#" class="btn secondary">Source Code</a>
+            </div>
+          </div>
         </div>
-        <div class="project-item">
-          <img src="assets/images/projects/project2.jpg" alt="Project 2 Screenshot" />
-          <h3>Project Title 2</h3>
-          <p>A short description of project 2 goes here.</p>
-        </div>
-        <!-- Add additional projects as needed -->
+        <!-- Add more project items similarly -->
       </div>
     </div>
   </section>
