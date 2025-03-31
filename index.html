@@ -11,45 +11,25 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Header with Menu -->
-  <header id="header">
-    <nav>
-      <ul>
-        <li><a href="index.html" class="nav-link active">Home</a></li>
-        <li><a href="about.html" class="nav-link">About</a></li>
-        <li><a href="skills.html" class="nav-link">Skills</a></li>
-        <li><a href="projects.html" class="nav-link">Projects</a></li>
-        <li><a href="contact.html" class="nav-link">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+  <!-- Side Navigation -->
+  <nav class="side-nav">
+    <div class="nav-dot active" data-label="Home"></div>
+    <div class="nav-dot" data-label="Projects"></div>
+    <div class="nav-dot" data-label="Skills"></div>
+    <div class="nav-dot" data-label="About"></div>
+    <div class="nav-dot" data-label="Contact"></div>
+  </nav>
+
+  <!-- Background Animation -->
+  <div class="bg-animation" id="bg-animation"></div>
 
   <!-- Hero Section -->
-  <section id="home" class="hero">
-    <div id="particles-js"></div>
-    <div class="hero-content glow">
-      <div class="profile-image">
-        <img src="assets/images/profile.jpeg" alt="Prathyusha K">
-      </div>
+  <section class="page-section hero">
+    <div class="hero-content">
       <h1>Prathyusha K</h1>
-      <div class="typing-text">
-        <span class="typed"></span>
-      </div>
-      <p class="tagline">Senior Software Engineer specializing in Cloud Architecture & Data Engineering</p>
-      <div class="cta-buttons">
-        <a href="projects.html" class="btn primary glow">View Projects</a>
-        <a href="assets/resume.pdf" class="btn secondary" target="_blank">Download Resume</a>
-      </div>
-      <div class="social-links">
-        <a href="https://linkedin.com/in/your-profile" target="_blank" class="glow">
-          <i class="fab fa-linkedin"></i>
-        </a>
-        <a href="https://github.com/your-profile" target="_blank" class="glow">
-          <i class="fab fa-github"></i>
-        </a>
-        <a href="https://twitter.com/your-profile" target="_blank" class="glow">
-          <i class="fab fa-twitter"></i>
-        </a>
+      <p class="lead">Senior Software Engineer</p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn">View Projects</a>
       </div>
     </div>
   </section>
