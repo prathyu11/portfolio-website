@@ -7,6 +7,79 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Skills - Prathyusha K</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      padding: 2rem;
+    }
+
+    .skill-category {
+      background: var(--card-bg);
+      border-radius: 16px;
+      padding: 2rem;
+      border: 1px solid var(--border-color);
+    }
+
+    .skill-category h3 {
+      color: var(--accent-primary);
+      margin-bottom: 1.5rem;
+      font-size: 1.5rem;
+    }
+
+    .skill-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .skill-pill {
+      background: rgba(255, 51, 102, 0.1);
+      color: var(--accent-primary);
+      padding: 0.5rem 1rem;
+      border-radius: 50px;
+      font-size: 0.9rem;
+      transition: all 0.3s ease;
+    }
+
+    .skill-pill:hover {
+      background: var(--accent-primary);
+      color: white;
+      transform: translateY(-2px);
+    }
+
+    .skill-bars {
+      grid-column: 1 / -1;
+      background: var(--card-bg);
+      border-radius: 16px;
+      padding: 2rem;
+      border: 1px solid var(--border-color);
+    }
+
+    .skill-bar {
+      margin-bottom: 1.5rem;
+    }
+
+    .skill-bar h4 {
+      margin-bottom: 0.5rem;
+      color: var(--text-secondary);
+    }
+
+    .progress-bar {
+      height: 8px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .progress-fill {
+      height: 100%;
+      background: linear-gradient(45deg, var(--accent-primary), var(--accent-secondary));
+      border-radius: 4px;
+      transition: width 1s ease-in-out;
+    }
+  </style>
 </head>
 <body>
   <header id="header">
@@ -23,39 +96,57 @@
 
   <section id="skills" class="skills page-section">
     <div class="container">
-      <h2>Skills</h2>
-      <div class="skills-container card">
-        <div class="skills-grid">
-          <div class="skill-category">
-            <h3>Cloud & Infrastructure</h3>
-            <div class="skill-pills">
-              <span class="skill-pill">AWS</span>
-              <span class="skill-pill">Azure</span>
-              <span class="skill-pill">Docker</span>
-              <span class="skill-pill">Kubernetes</span>
+      <h2>Skills & Expertise</h2>
+      <div class="skills-grid">
+        <div class="skill-category">
+          <h3>Cloud & Infrastructure</h3>
+          <div class="skill-pills">
+            <span class="skill-pill">AWS</span>
+            <span class="skill-pill">Azure</span>
+            <span class="skill-pill">Docker</span>
+            <span class="skill-pill">Kubernetes</span>
+            <span class="skill-pill">Terraform</span>
+          </div>
+        </div>
+        
+        <div class="skill-category">
+          <h3>Programming</h3>
+          <div class="skill-pills">
+            <span class="skill-pill">Python</span>
+            <span class="skill-pill">JavaScript</span>
+            <span class="skill-pill">Java</span>
+            <span class="skill-pill">SQL</span>
+            <span class="skill-pill">Node.js</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3>Web Technologies</h3>
+          <div class="skill-pills">
+            <span class="skill-pill">HTML5</span>
+            <span class="skill-pill">CSS3</span>
+            <span class="skill-pill">React</span>
+            <span class="skill-pill">Vue.js</span>
+          </div>
+        </div>
+
+        <div class="skill-bars">
+          <div class="skill-bar">
+            <h4>Cloud Architecture</h4>
+            <div class="progress-bar">
+              <div class="progress-fill" style="width: 90%"></div>
             </div>
           </div>
-          <div class="skill-category">
-            <h3>Programming</h3>
-            <div class="skill-pills">
-              <span class="skill-pill">Python</span>
-              <span class="skill-pill">JavaScript</span>
-              <span class="skill-pill">Java</span>
-              <span class="skill-pill">SQL</span>
+          <div class="skill-bar">
+            <h4>Data Engineering</h4>
+            <div class="progress-bar">
+              <div class="progress-fill" style="width: 85%"></div>
             </div>
           </div>
-          <div class="skill-bars">
-            <div class="skill-bar">
-              <h4>Cloud Architecture</h4>
-              <div class="progress-bar">
-                <div class="progress-fill" style="width: 90%"></div>
-              </div>
-            </div>
-            <div class="skill-bar">
-              <h4>Data Engineering</h4>
-              <div class="progress-bar">
-                <div class="progress-fill" style="width: 85%"></div>
-              </div>
+          <div class="skill-bar">
+            <h4>DevOps</h4>
+            <div class="progress-bar">
+              <div class="progress-fill" style="width: 80%"></div>
             </div>
           </div>
         </div>
@@ -66,3 +157,4 @@
   <script src="script.js"></script>
 </body>
 </html>
+
