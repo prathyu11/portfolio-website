@@ -3,24 +3,25 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Your Name - Portfolio</title>
+  <title>Prathyusha K - Portfolio</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- Navigation -->
-  <header>
+  <!-- Header with Transparent to Solid Background on Scroll -->
+  <header id="header">
     <nav>
       <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
       </ul>
     </nav>
   </header>
 
   <!-- Hero Section -->
   <section id="home" class="hero">
+    <div class="hero-overlay"></div>
     <div class="hero-content">
       <h1>Prathyusha K</h1>
       <p>Senior Software Engineer - Cloud and Data</p>
@@ -33,7 +34,7 @@
     <div class="container">
       <h2>About Me</h2>
       <p>
-        Write a brief introduction about yourself, your skills, and your background.
+        This is where you introduce yourself. Describe your background, skills, and what drives you. Make this section engaging with your unique story.
       </p>
     </div>
   </section>
@@ -43,18 +44,17 @@
     <div class="container">
       <h2>Projects</h2>
       <div class="project-grid">
-        <!-- Project Item Example -->
         <div class="project-item">
           <img src="project1.jpg" alt="Project 1 Screenshot" />
           <h3>Project Title 1</h3>
-          <p>Short description of project 1.</p>
+          <p>A short description of project 1 goes here.</p>
         </div>
         <div class="project-item">
           <img src="project2.jpg" alt="Project 2 Screenshot" />
           <h3>Project Title 2</h3>
-          <p>Short description of project 2.</p>
+          <p>A short description of project 2 goes here.</p>
         </div>
-        <!-- Add more project items as needed -->
+        <!-- Add additional projects as needed -->
       </div>
     </div>
   </section>
@@ -74,7 +74,9 @@
 
   <!-- Footer -->
   <footer>
-    <p>&copy; 2025 Your Name. All rights reserved.</p>
+    <div class="container">
+      <p>&copy; 2025 Prathyusha K. All rights reserved.</p>
+    </div>
   </footer>
 
   <script src="script.js"></script>

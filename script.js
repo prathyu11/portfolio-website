@@ -12,4 +12,14 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
+
+  // Change header background on scroll
+  const header = document.getElementById("header");
+  window.addEventListener("scroll", function () {
+    if (window.scrollY > 50) {
+      header.classList.add("solid");
+    } else {
+      header.classList.remove("solid");
+    }
+  });
 });

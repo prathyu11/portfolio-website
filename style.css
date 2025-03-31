@@ -1,4 +1,4 @@
-/* Global Styles */
+/* Reset and Global Styles */
 * {
   margin: 0;
   padding: 0;
@@ -6,19 +6,26 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
   color: #333;
+  background: #f9f9f9;
 }
 
-/* Navigation */
+/* Header & Navigation */
 header {
-  background: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   position: fixed;
-  width: 100%;
   top: 0;
-  z-index: 100;
+  width: 100%;
+  padding: 20px 0;
+  z-index: 1000;
+  transition: background 0.3s;
+  background: transparent;
+}
+
+header.solid {
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 nav ul {
@@ -28,80 +35,15 @@ nav ul {
 }
 
 nav ul li {
-  margin: 0 15px;
+  margin: 0 20px;
 }
 
 nav ul li a {
   text-decoration: none;
   color: #333;
-  padding: 15px;
-  display: block;
+  font-weight: 500;
+  transition: color 0.3s;
 }
 
-/* Hero Section */
-.hero {
-  height: 100vh;
-  background: url('hero-bg.jpg') no-repeat center center/cover;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: #fff;
-}
-
-.hero-content h1 {
-  font-size: 3em;
-  margin-bottom: 0.5em;
-}
-
-.hero-content p {
-  font-size: 1.2em;
-  margin-bottom: 1em;
-}
-
-.btn {
-  display: inline-block;
-  padding: 10px 20px;
-  background: #333;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 5px;
-}
-
-/* Sections */
-section {
-  padding: 80px 20px;
-  margin-top: 60px; /* account for fixed header */
-}
-
-.container {
-  max-width: 1200px;
-  margin: auto;
-}
-
-/* Projects Section */
-.projects .project-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-}
-
-.project-item {
-  background: #f4f4f4;
-  padding: 20px;
-  border-radius: 5px;
-  text-align: center;
-}
-
-.project-item img {
-  max-width: 100%;
-  border-radius: 5px;
-}
-
-/* Footer */
-footer {
-  background: #333;
-  color: #fff;
-  text-align: center;
-  padding: 20px;
-}
+nav ul li a:hover {
+  color: #007
