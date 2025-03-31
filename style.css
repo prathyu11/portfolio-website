@@ -25,11 +25,12 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem;
+  width: 100%;
 }
 
 .page-section {
-  padding-top: 100px;
-  min-height: 100vh;
+  padding: 120px 0 60px;  /* Increased top padding to account for fixed header */
+  min-height: calc(100vh - 80px); /* Subtract header height */
 }
 
 /* Header & Navigation */
@@ -42,14 +43,21 @@ header {
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border-color);
   z-index: 1000;
+  height: 80px;
+  display: flex;
+  align-items: center;
+}
+
+nav {
+  width: 100%;
 }
 
 nav ul {
-  list-style: none;
+  margin: 0;
+  padding: 0;
   display: flex;
   justify-content: center;
   gap: 2rem;
-  padding: 1.5rem 0;
 }
 
 nav ul li a {
@@ -144,15 +152,73 @@ textarea:focus {
   grid-template-columns: repeat(3, 1fr);
 }
 
+/* Project Grid */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+/* Skills Layout */
+.skills-container {
+  margin-top: 2rem;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+}
+
+/* About Page Layout */
+.about-content {
+  margin-top: 2rem;
+}
+
+.about-content .grid {
+  align-items: start;
+}
+
+.about-text {
+  padding-right: 2rem;
+}
+
+/* Contact Page Layout */
+.contact-content {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 3rem;
+  margin-top: 2rem;
+}
+
 /* Responsive Design */
+@media (max-width: 1024px) {
+  .project-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (max-width: 768px) {
-  .grid-2,
-  .grid-3 {
+  .project-grid,
+  .skills-grid {
     grid-template-columns: 1fr;
+  }
+
+  .contact-content {
+    grid-template-columns: 1fr;
+  }
+
+  .about-content .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-text {
+    padding-right: 0;
   }
 
   nav ul {
     gap: 1rem;
-    padding: 1rem 0;
+    padding: 0 1rem;
   }
 }
